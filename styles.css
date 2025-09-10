@@ -1,24 +1,12 @@
-
-h1 {
-           color: green;       
-           font-size: 28px;    
-           text-align: left;   
-       } 
-
-
-       p {
-           color: gray;        
-           font-style: italic; 
-       }
-
-       h1 {
-   color: red;          
-   font-size: 32px;    
-   text-align: right;   
+a {
+    color:rgb(0,0,0);
+    text-decoration: none;
 }
 
+.header{
+    background-color: whitesmoke;
+}
 
-p {
-   color: darkblue;      
-   font-weight: bold;    
+#highlight{
+    background-color: yellowgreen;
 }

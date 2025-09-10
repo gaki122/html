@@ -1,123 +1,152 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>HTML Basics Demo</title>
-</head>
+    <html>
+        <head>
+            <title> HTML Basics DEMO</title>
+        </head>
 
- <style>
-   .box {
-     background-color: lightblue;
-     padding: 10px;
-   }
+        <style>
+            body {
+                background-color: white;
+            }
 
-      .highlight {
-     color: red;
-     font-weight: bold;
-   }
+            
+            .header{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                gap:10px;
+                grid-template-areas:
+                "item1 item2"
+            }
 
- </style>
-  <style>
-       table,
-       th,
-       td {
-           border: 1px solid black;
-           border-collapse: collapse;
-         
+            .item1{grid-area: item1;
+            background-color:lightblue;
+            text-align:center;
+            }
+
+            .item2{grid-area: item2;
+            background-color:lightgreen;
+            text-align:center;
+         }
+
+            @media(max-width: 400px) {
+                body { 
+                    background-color:
+                    purple;
+                }
+            }
+
+            
+            table,
+            th,
+            td {
+                border: solid black;
+                border-collapse: collapse;
+            }
+
+             form {
+           width: 40%;
+           background-color: whitesmoke;
+           padding: 20px;
+           border-radius: 8px; 
        }
 
 
-   </style>
+        </style>
 
-
-</head>
-
-<body>
-
-    <h1>Welcome to HTML!</h1>
-    <p>This is a paragraph element. HTML uses tags to mark up content.</p>
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcX75iU--o5lLSgzCjVOk6D-o9ph4TEes3Pg&s">
+        <link rel = "stylesheet" href = "style.css">
     
-    <p>
-    To learn more about HTML, please kindly visit
-    <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3School</a>
-    </p>
+    </head>
 
+    <body>
+        <div class="header">
 
-     <style>
-       table,
-       th,
-       td {
-           border: 1px solid black;
-           border-collapse: collapse;
-         
-       }
+            <div class="item1">
+                <h1> ITEM1 </h1>
+            </div>
+            <div class="item2">
+                <h1>ITEM2</h1>
+            </div>
 
+            <h1 style="color: lightblue; text-align:center"> Welcome to HTML!</span></h1>
+        </div>    
+        <p> This is a paragraph element. <b>HTML</b> uses tags to mark up content.</p>
+               
+        </body>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" 
+        alt="HTML Logo">
 
-   </style>
+        <p> To learn more about HTML/visit
+            <a href="https://www.w3schools.com/" target="_blank"><i>w3schools</i>
+            </a></p>   
 
+        <p> In order to go to second page <a href="next.html">Click Here </a></p> 
 
-</head>
+        <p> The concepts that will be convered here are:</p>
+        <ol> 
+            <li>HTML Lists</li>
+            <li>HTML Forms</li>
+            <li>HTML Tables</li>
+        </ol>
 
+        <table>
+            <caption>Personal Information</caption>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                
+            </tr>
+            <tr>
+                <td>Tshering</td>
+                <td>Wangmo</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>Pema</td>
+                <td>Dorji</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Leki</td>
+                <td>Wangmo</td>
+                <td>41</td>
+            </tr>
 
-<body>
-   <table style = "width: 100%;">
-     <caption>Personal Information</caption>
-       <tr>
-           <th>Firstname</th>
-           <th>Lastname</th>
-           <th>Age</th>
-       </tr>
-       <tr>
-           <td>Tshering</td>
-           <td>Wangmo</td>
-           <td>28</td>
-       </tr>
-       <tr>
-           <td>Pema</td>
-           <td>Dorji</td>
-           <td>32</td>
-       </tr>
-       <tr>
-           <td>Leki</td>
-           <td>Wangmo</td>
-           <td>41</td>
-       </tr>
-   </table>
+        </table>
 
-    <form> <!-- Starting the form -->
-       <fieldset> <!-- Groups all inputs within a border -->
-           <legend>User Personal Information</legend>  <!-- Title for the fieldset -->
-           <label for="name">Enter your full name:</label>
-           <input type="text" id="name" name="name" required />
-           <label for="email">Enter your email:</label>
-           <input type="email" id="email" name="email" required />
-           <label for="password">Enter your password:</label>
-           <input type="password" id="password" name="pass" required />
-           <label for="confirmPassword">Confirm your password:</label>
-           <input type="password" id="confirmPassword" name="confirmPass" required />
-           <label>Enter your gender:</label>
-           <div class="gender-group">
-               <input type="radio" name="gender" value="male" id="male" required />
-               <label for="male">Male</label>
-               <input type="radio" name="gender" value="female" id="female" />
-               <label for="female">Female</label>
-               <input type="radio" name="gender" value="others" id="others" />
-               <label for="others">Others</label>
-           </div>
-           <label for="dob">Enter your Date of Birth:</label>
-           <input type="date" id="dob" name="dob" required />
-           <label for = "designation">Occupation</label>
-           <select id = "designation" name = "Occupation">
-             <option value="Government">Government Service</option>
-             <option value="Private">Private Sectors</option>
-           </select>
-           <label for="address">Enter your Address:</label>
-           <textarea id="address" name="address" required></textarea>
-           <input type="submit" value="Submit" />
-       </fieldset>
-   </form>
-
-
-</body>
+        <form>
+            <fieldset> 
+                <legend>User Personal Information</legend>  
+                <label for="name">Enter your full name:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="password">Enter your password:</label>
+                <input type="password" id="password" name="pass" required />
+                <label for="confirmPassword">Confirm your password:</label>
+                <input type="password" id="confirmPassword" name="confirmPass" required />
+                
+                <label>Enter your gender:</label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" value="male" id="male" required />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female" />
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" value="others" id="others" />
+                    <label for="others">Others</label>
+                </div>
+                
+                <label for="dob">Enter your Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required />
+                <label for = "designation">Occupation</label>
+                <select id = "designation" name = "Occupation">
+                    <option value="Government">Government Service</option>
+                    <option value="Private">Private Sectors</option>
+                </select>
+                <label for="address">Enter your Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                <input type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </body>
 </html>
