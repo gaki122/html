@@ -10,7 +10,7 @@
             }
 
             
-            .header{
+            /*.header{ 
                 display:grid;
                 grid-template-columns: 1fr 1fr;
                 gap:10px;
@@ -26,7 +26,26 @@
             .item2{grid-area: item2;
             background-color:lightgreen;
             text-align:center;
+         } */
+
+         .header{
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            gap:1vw;  
+            background-color: darkgreen;
+            color: white; 
          }
+
+         .item1{
+            flex:0 0 auto;
+
+         }
+
+         .item2{
+            flex: 0 0 auto;
+         }
+
 
             @media(max-width: 400px) {
                 body { 
@@ -34,6 +53,13 @@
                     purple;
                 }
             }
+
+
+            .header{
+                flex-direction:column;
+                align-items:center;
+            }
+
 
             
             table,
@@ -61,13 +87,13 @@
         <div class="header">
 
             <div class="item1">
-                <h1> ITEM1 </h1>
+                <h1> HTML </h1>
             </div>
             <div class="item2">
-                <h1>ITEM2</h1>
+                <h1>CSS</h1>
             </div>
 
-            <h1 style="color: lightblue; text-align:center"> Welcome to HTML!</span></h1>
+            <!--<h1 style="color: lightblue; text-align:center"> Welcome to HTML!</span></h1>.-->
         </div>    
         <p> This is a paragraph element. <b>HTML</b> uses tags to mark up content.</p>
                
@@ -150,3 +176,4 @@
         </form>
     </body>
 </html>
+
